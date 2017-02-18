@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" style="height:100%">
 <?php include("header.php"); ?>
-
-
+<link rel="manifest" href="manifest.json">
+<script src="sw_app.js"></script>
 <body style="height:100%" >
 	<div id="header">
 <div id="volver" class="leftButton" onclick="toggleMenu()"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></div>
