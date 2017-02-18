@@ -29,6 +29,7 @@ var CACHED_URLS = [
         "bootstrap-3.3.7-dist/css/bootstrap.css",
         "bootstrap-3.3.7-dist/css/bootstrap-theme.css",
         "Audiowide.ttf",
+     "https://fonts.googleapis.com/css?family=Audiowide|Barrio",
   'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'
   
 ];
