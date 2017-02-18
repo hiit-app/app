@@ -2,6 +2,7 @@ var CACHE_NAME = 'cache_hiitpng';
 var CACHED_URLS = [
   './',
      "images/entreno1.jpg",
+  "manifest.json",
      "images/entreno2.jpg",
      "images/entreno3.jpg",
      "images/hiit.144.png",
