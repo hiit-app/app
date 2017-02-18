@@ -1,8 +1,7 @@
 var CACHE_NAME = 'cache_hiitpng';
 var CACHED_URLS = [
-  './',
+'./',
      "images/entreno1.jpg",
-  "manifest.json",
      "images/entreno2.jpg",
      "images/entreno3.jpg",
      "images/hiit.144.png",
@@ -15,12 +14,19 @@ var CACHED_URLS = [
      "percepcion.css",
      "percepcion.js",
      "sw_app.js",
-  "sw.js",
+  "sw.js"
      "percepcion.php",
      "header.php",
         "haciendoheader.php",
-        
-        
+        "manifest.json",
+        "bootstrap-3.3.7-dist/js/bootstrap.min.js",
+        "bootstrap-3.3.7-dist/js/bootstrap.js",
+        "bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot",
+        "bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.svg",
+        "bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.ttf",
+        "bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff",
+        "bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff2",
+        "bootstrap-3.3.7-dist/css/bootstrap.min.css",
   'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'
   
 ];
