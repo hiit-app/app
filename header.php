@@ -1,6 +1,6 @@
 <head>
 	<meta charset="UTF-8">
-
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <!-- for ios 7 style, multi-resolution icon of 152x152 -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">

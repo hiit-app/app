@@ -32,18 +32,25 @@ Atras del modal.... Define el color de fondo , */
       bottom: 0;
       left: 0;
       background-color: rgba(0, 0, 0, 0.2);
+
     }
 
     .modal-body {
       position: fixed;
       top: 3em;
       bottom: 3em;
-      right: 20%;
-      left: 20%;
+      
+      
       padding: 2em 3em;
       background-color: white;
       overflow: auto;
       box-pack: justify;
+      text-overflow: ellipsis;
+      font-size: 80%;
+      max-width: 100%;
+      text-align : justify;
+      display: table;
+   
     }
 
     .modal-close {
@@ -71,7 +78,7 @@ Atras del modal.... Define el color de fondo , */
           <div class="modal-close" id="close">&times;</div>
 
 <!-- Abajo se incluye cuerpo del modal que se abre -->
-          <h2>Instrucciones:</h2>
+          <h3>Instrucciones:</h3>
           <p>Debes ingresar los kilos de la serie. Luego debes percibir cuantas repeticiones te quedan en reserva
           	al terminar la serie. Si sientes que te quedan aún 2 mas, escribe ese número en reserva.
           	Si sientes que solo puedes hacer una mas, escribe una. Si luego de hacer las repeticiones, sientes que ya no puedes

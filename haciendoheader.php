@@ -15,8 +15,25 @@
 </style>
 
 
-<div id="menutorsopierna1" class="navegacion" style="display:none; text-align:center"><nav>blabla</nav></div>
-<div id="menutorsopierna" style="display:none"><nav id="navegacion"><table ><th id="torso" style="width:30%; cursor: pointer;">Torso</th> <th id="pierna" style="cursor: pointer;; width:30%; opacity: 0.5;">Pierna</th></table></nav></div>
+<div id="menutorsopierna1" class="navegacion" style="display:none; text-align:center;height:35px"><nav>blabla</nav></div>
+
+<div id="menutorsopierna" style="display:none; width:100%; ">
+<style>
+	
+
+	#navegacion_torsoypierna_input{
+		margin-left:auto; 
+    margin-right:auto;
+    
+	}
+</style>
+	<nav style="">
+		<table id="navegacion_torsoypierna_input"  >
+			<th id="torso" style="width:30%; cursor: pointer;">Torso</th> 
+			<th id="pierna" style="cursor: pointer;; width:30%; opacity: 0.5;">Pierna</th>
+		</table>
+	</nav>
+</div>
 
 <div id="afd" style="height:100%; padding:0px">
      <div class="blend"><h4 style="cursor: pointer;" id="blend">Entreno Aeróbico</h4></div>
