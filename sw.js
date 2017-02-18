@@ -15,6 +15,7 @@ var CACHED_URLS = [
      "percepcion.css",
      "percepcion.js",
      "sw_app.js",
+  "sw.js",
      "percepcion.php",
      "header.php",
         "haciendoheader.php",
