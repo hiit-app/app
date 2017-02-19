@@ -1,7 +1,7 @@
 var CACHE_NAME = 'cache_hiitpng1';
 var CACHED_URLS = [
 './',
-     "Index.php",
+     "index.php",
      "images/entreno1.jpg",
      "images/entreno2.jpg",
      "images/entreno3.jpg",
