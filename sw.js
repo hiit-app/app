@@ -1,4 +1,4 @@
-var CACHE_NAME = 'cache_hiitpng1';
+var CACHE_NAME = 'cache_hiitpng2';
 var CACHED_URLS = [
 './',
      "index.php",
