@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+ <script type="text/javascript" src =
+ "http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+</head>
+<body>
+<h2>Add a Note</h2>
+<form>
+Title: <input type="text" id="title"><br/>
+Body:<br/>
+<textarea id="body"></textarea><br/>
+<button id="addNote">Add Note</button>
+</form>
+<p/>
+<table id="notes" border="1"><tbody></tbody></table>
+
+
+<script>
+function websqlOK() {
+ return "openDatabase" in window;
+}
+var db;
+
+
+$(document).ready(function() {
+ //No support? Go in the corner and pout.
+ if(!websqlOK()) return;
+
+
+ db = window.openDatabase("db12", "1", "Database 1", 5*1024*1024);
+
+ db.transaction(function(tx) {
+ tx.executeSql("CREATE TABLE IF NOT EXISTS todo" +
+' (id INTEGER NOT NULL PRIMARY KEY ASC, ' +
+' date DATE NOT NULL, tipo_torso_pierna TEXT NOT NULL, ' +
+' ejercicio TEXT NOT NULL, series INTEGER NOT NULL, ' +
+' kilos_entreno INTEGER NOT NULL, kilos_activacion INTEGER NOT NULL, ' +
+' tiempo_entreno INTEGER NOT NULL );');
+ },dbError,function(tx) {
+ ready();
+
+ });
+});
+
+
+function todo_bd_ingresa(date, torso_pierna, ejercicio, series, kilos_entreno, kilos_activacion, tiempo_entreno){
+db = window.openDatabase("db12", "1", "Database 1", 5*1024*1024);
+
+ db.transaction(function(tx) {
+ tx.executeSql("CREATE TABLE IF NOT EXISTS todo" +
+' (id INTEGER NOT NULL PRIMARY KEY ASC, ' +
+' date DATE NOT NULL, tipo_torso_pierna TEXT NOT NULL, ' +
+' ejercicio TEXT NOT NULL, series INTEGER NOT NULL, ' +
+' kilos_entreno INTEGER NOT NULL, kilos_activacion INTEGER NOT NULL, ' +
+' tiempo_entreno INTEGER NOT NULL );');
+ },dbError,function(tx) {
+ db.transaction(function(tx){
+    var addedOn = new Date();
+    tx.executeSql("INSERT INTO todo(date, tipo_torso_pierna, ejercicio, series, kilos_entreno, kilos_activacion, tiempo_entreno) VALUES (?,?,?,?,?,?,?)",
+        [date, torso_pierna, ejercicio, series, kilos_entreno, kilos_activacion, tiempo_entreno],function(e) {
+console.log("Db error ",e);
+}, function() {
+console.log("Done");
+});
+
+ });
+});
+}
+
+
+function dbError(e) {
+ console.log("Error", e);
+}
+
+
+var $title, $body, $notesTable;
+
+function ready() {
+ $("#addNote").on("click", addNote);
+ $("html").on("click", mostrar)
+ $title = $("#title");
+ $body = $("#body");
+ $notesTable = $("#notes tbody");
+ renderNotes();
+}
+
+
+function addNote(e) {
+ e.preventDefault();
+ //no validation
+ var title = $title.val();
+ var body = $body.val();
+
+
+
+
+ db.transaction(function(tx) {
+ tx.executeSql("insert into notes(title,body,updated) values(" +
+ "'" + title + "','" + body + "'," + (new Date().getTime()) +")");
+ },dbError,function(tx) {
+ $title.val("");
+ $body.val("");
+ renderNotes();
+ });
+}
+
+function mostrar(title){
+
+  db.readTransaction(function(tx) {
+    tx.executeSql('select * from notes where date=?;', [title], 
+      function(tx, results){
+      for (var i = 0; i < results.rows.length; i++) {
+        var row= results.rows.item(i);
+        console.log(row.title);
+        var texto= document.getElementById("hola");
+        
+        
+
+
+      };
+    })
+  })
+}
+
+function renderNotes() {
+ db.readTransaction(function(tx) {
+ tx.executeSql('select * from notes',[],
+ function(tx, results) {
+
+  var rowStr = "";
+ for(var i=0;i<results.rows.length;i++) {
+ var row = results.rows.item(i);
+ //use row.col
+
+ rowStr += "<tr><td>" + row.date + "</td>";
+ rowStr += "<td>" + row.ejercicio + "</td>";
+ var d = new Date();
+ d.setTime(row.updated);
+ rowStr += "<td>" + d.toDateString() + " " + d.toTimeString();
+ rowStr += "</td></tr>";
+ };
+ $notesTable.empty();
+ $notesTable.append(rowStr);
+ });
+ },dbError);
+ 
+
+}
+
+var jojo= document.getElementById("disponiendo1");
+
+window.addEventListener("click", disponiendo, false);
+
+function disponiendo(){
+var peo= prompt()
+ mostrar(peo);
+}
+
+
+</script>
+<div id="hola">jeje</div>
+<input type="button" value="apretar" id="disponiendo1">
+</body>
+</html>

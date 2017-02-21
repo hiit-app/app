@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="storage.js"></script>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	 <script type="text/javascript" src =
+ "http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body onLoad="init1()">
+<script>
+
+	setTimeout(dia, 1000);
+
+		function dia(){
+
+
+
+			alert("peo")
+			var ahora = new Date();
+var comienzo = new Date(ahora.getFullYear(), 0, 0);
+var dif = ahora - comienzo;
+var unDia = (1000 * 60 * 60 * 24);
+var dia = Math.ceil(dif / unDia)-1;
+var clase= document.getElementsByClassName(dia);
+for (var i = 0; i < clase.length; i++) {
+	var agregando= document.getElementById("hola");
+
+	clase[i].style.display="block"
+
+};
+       
+		}
+			
+	
+
+	
+
+</script>
+	<div id="todoItems"></div>
+	<div id="hola" style=""></div>
+</body>
+</html>

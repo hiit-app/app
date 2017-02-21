@@ -160,6 +160,20 @@ border-width: 0 8px 0 8px;
 cursor: pointer;
 
 }
+#header div.leftButton1 {
+position: absolute;
+top: 12px;
+left: 6px;
+height: 30px;
+font-weight: bold;
+text-align: center;
+color: white;
+text-shadow: rgba (0,0,0,0.6) 0px -1px 1px;
+line-height: 28px;
+border-width: 0 8px 0 8px;
+cursor: pointer;
+
+}
 
 
 
