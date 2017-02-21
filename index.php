@@ -2,6 +2,7 @@
 <html lang="en" style="height:100%">
 <?php include("header.php"); ?>
 <link rel="manifest" href="manifest.json">
+<<<<<<< HEAD
 
 <script src="storage.js">
 
@@ -59,11 +60,30 @@
 
 init_start();*/
 </script>
+=======
+<script src="sw_app.js"></script>
+<body style="height:100%" >
+	<div id="header">
+<div id="volver" class="leftButton" onclick="toggleMenu()"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></div>
+	    
+	    <h1><a href="javascript:void()">ENTRENAMIENTO</a></h1>
+    </div>
+
+<style>
+	
+</style>
+>>>>>>> origin/master
 
 <div id="menutorsopierna1" class="navegacion" style="display:none; text-align:center;height:35px"><nav>blabla</nav></div>
 
+<<<<<<< HEAD
 <div id="menutorsopierna" style="display:none; width:100%; ">
 
+=======
+<div id="menutorsopierna1" class="navegacion" style="display:none; text-align:center;height:35px"><nav>blabla</nav></div>
+
+<div id="menutorsopierna" style="display:none; width:100%; ">
+>>>>>>> origin/master
 <style>
 	
 
@@ -83,6 +103,7 @@ init_start();*/
 
 <div id="afd" style="height:100%; padding:0px">
      <div class="blend"><h4 style="cursor: pointer;" id="blend">Entreno Aeróbico</h4></div>
+<<<<<<< HEAD
      <div class="blend1"><h4 style="cursor: pointer;" id="blend1" class="inicio" style="display:block">Fuerza</h4></div>
      <div class="blend2"><h4 style="cursor: pointer;" id="blend2">Estiramientos</h4></div>
   </div>
@@ -95,6 +116,18 @@ init_start();*/
 
 <li><a href="about.html" class="escala_esfuerzo" >Press Banca</a></li>
 
+=======
+     <div class="blend1"><h4 style="cursor: pointer;" id="blend1">Fuerza</h4></div>
+     <div class="blend2"><h4 style="cursor: pointer;" id="blend2">Estiramientos</h4></div>
+  </div>
+
+ <?php include("percepcion.php"); ?>
+    <!-- ACA UBICO MENU QUE DICE LOS EJERCICIOS A HACER -->
+<div id="menu_a">
+<div>
+<ul>
+<li><a href="about.html" class="escala_esfuerzo" >Press Banca</a></li>
+>>>>>>> origin/master
 <li><a href="blog.html" class="escala_esfuerzo" >Jalones Nuca</a></li>
 <li><a href="contact.html" class="escala_esfuerzo" >Dominadas</a></li>
 </ul>
@@ -142,8 +175,11 @@ dispuestos los ejercicios como pressbanca, dominadas, etc... */
 
 $(".escala_esfuerzo").click(function(){
 	event.preventDefault();
+<<<<<<< HEAD
 	
 	
+=======
+>>>>>>> origin/master
 $("#menutorsopierna1").css("display", "block")
 $("#menutorsopierna1").text("Series de Activación")
 $("#menutorsopierna").css("display", "none")
@@ -164,6 +200,7 @@ $("#rm").text("3RM");  // aca se pone el texto del rm
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -258,10 +295,92 @@ $("#menutorsopierna").css("display", "block");
 $("#volver_menu").css("display", "none");
 $("#volver1").css("display", "block");
 
+=======
+>>>>>>> origin/master
 
 
 
 
+<<<<<<< HEAD
+=======
+
+	$(document).ready(function(){
+
+
+		$("#blend1").click(function(){
+$("#volver").attr("id", "volver_menu");
+
+
+
+
+var clase= $(this).attr('id');
+$("#afd").css("display", "none");
+$("#menutorsopierna").css("display", "block")
+/*Aca se agrega codigo que tiene que ver con eleccion en menu principal,
+se elige fuerza hasta ahora febrero 2017, y se cambian menus... */
+
+$("#menu_a").css("display", "block");
+//$(".navegacion").css("display", "none")
+		})
+
+$("#pierna").click(function(){
+	$("#menu_a").css("display", "none");
+	$("#menu_b").css("display", "block");
+	$(this).css("opacity","1");
+	$("#torso").css("opacity", 0.5);
+})
+
+$("#torso").click(function(){
+	$("#menu_b").css("display", "none");
+	$("#menu_a").css("display", "block");
+	$(this).css("opacity","1");
+	$("#pierna").css("opacity", 0.5);
+})
+
+	})
+
+
+
+	function toggleMenu(){
+
+//alert($("#menutorsopierna1").text())
+if($("#menutorsopierna1").text() == "Series de Entreno"){
+/*Abajo se ubica código que limpia los input de kgs, el nav, ..*/
+
+
+
+
+
+
+
+
+
+
+	alert("No Salgas Cuando se está haciendo el entreno!");
+
+
+/*Arriba se ubica código que limpia los input de kgs, el nav, ..*/
+
+}else if($("#agregar_escala").css("display")=="block"){
+
+$("#menutorsopierna").css("display", "block");
+    $("#menutorsopierna1").css("display", "none");
+	
+	$(".Menu_ejercicio_seleccionado_parte_de_arriba").css("display", "none");
+    $("#menu_a").css("display", "block");
+	$("#agregar_escala").css("display", "none");
+
+}else{
+
+
+	$("#menu_a").css("display", "none");
+	$("#menu_b").css("display", "none");
+	$("#menutorsopierna").css("display", "none");
+	$("#afd").css("display", "block");
+
+
+
+>>>>>>> origin/master
 }
 
 
@@ -283,4 +402,8 @@ if(document.getElementById("series_activacion") && !($("#menutorsopierna1").text
 
 
 
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> origin/master
